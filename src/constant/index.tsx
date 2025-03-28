@@ -5,13 +5,13 @@ export const tasks: ITask[] = [
     id: 1,
     title: "Counter App",
     description:
-      "count the value using a class component with increment and decrement, state methods,and updates the value using the setstate method.",
+      "Count the value using a class component with increment and decrement, state methods,and updates the value using the setstate method.",
   },
   {
     id: 2,
-    title: "Counter App",
+    title: "Greeting App",
     description:
-      "count the value using a class component with increment and decrement, state methods,and updates the value using the setstate method.",
+      " Create a Greeting component that takes a name as a prop and displays a personalized message.",
   },
   {
     id: 3,
