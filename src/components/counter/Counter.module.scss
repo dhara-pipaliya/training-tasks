@@ -1,0 +1,71 @@
+@import "../../styles/color.scss";
+
+.cardHome {
+  display: flex;
+  gap: 10px;
+  margin: 20px;
+  flex-wrap: wrap;
+  > svg {
+    color: $black;
+    cursor: pointer;
+  }
+  .backTasks {
+    cursor: pointer;
+    color: $black;
+    font-weight: 700;
+    font-size: 16px;
+  }
+}
+
+.container {
+  border: 1px solid $grey_100;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 0 40px;
+  border-radius: 5px;
+  flex-wrap: wrap;
+  justify-content: center;
+  min-width: 100px;
+  .countTitle {
+    font-size: 20px;
+    font-weight: 700;
+    color: $black;
+  }
+  .countContain {
+    color: $grey;
+    font-size: 14px;
+  }
+  .countSection {
+    text-align: center;
+    .count {
+      padding-top: 40px;
+      font-size: 40px;
+      font-weight: 600;
+    }
+    .countDescription {
+      color: $grey;
+      font-size: 16px;
+    }
+    .countButton {
+      padding-top: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      .countDecrement {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+      > svg {
+        width: 40px;
+        height: 40px;
+        fill: $black;
+        border: 1px solid $grey_100;
+        border-radius: 5px;
+        padding: 10px;
+        cursor: pointer;
+      }
+    }
+  }
+}

@@ -15,34 +15,37 @@
   justify-content: center;
   gap: 16px;
   width: 100%;
-  .cardMain {
-    border: 1px solid $grey_100;
-    padding: 14px;
-    min-width: 250px;
-    max-width: 300px;
-    border-radius: 5px;
-    flex: 1 1 250px;
-    .cardTitle {
-      display: flex;
-      gap: 5px;
-      color: $black;
-      font-size: 18px;
-      font-weight: 700;
-      .cardId {
-        color: $grey;
+  .cardLink {
+    text-decoration: none;
+    .cardMain {
+      border: 1px solid $grey_100;
+      padding: 14px;
+      min-width: 250px;
+      max-width: 300px;
+      border-radius: 5px;
+      flex: 1 1 250px;
+      .cardTitle {
+        display: flex;
+        gap: 5px;
+        color: $black;
         font-size: 18px;
+        font-weight: 700;
+        .cardId {
+          color: $grey;
+          font-size: 18px;
+        }
       }
-    }
-    .cardContain {
-      text-overflow: ellipsis;
-      overflow: hidden;
-      color: $grey;
-      font-size: 12px;
-      font-weight: 600;
-      white-space: initial;
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      -webkit-box-orient: vertical;
+      .cardContain {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        color: $grey;
+        font-size: 12px;
+        font-weight: 600;
+        white-space: initial;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+      }
     }
   }
 }
