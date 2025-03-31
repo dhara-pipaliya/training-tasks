@@ -23,12 +23,12 @@
   padding: 20px;
   margin: 0 40px;
   min-width: 100px;
-  .greetingTitle {
+  .taskTitle {
     font-size: 20px;
     font-weight: 700;
     color: $black;
   }
-  .greetingContain {
+  .taskDescription {
     color: $grey;
     font-size: 12px;
   }
@@ -64,18 +64,18 @@
       border: 1px solid $grey_100;
       padding: 5px;
       width: 93%;
-    }
-    .greetingButton {
-      padding: 8px 10px;
-      background-color: $black;
-      cursor: pointer;
-      border: none;
-      border-radius: 4px;
-      color: $grey_100;
-      font-weight: 700;
-      &.buttonDisable {
-        opacity: 0.5;
-        cursor: not-allowed;
+      .greetingButton {
+        padding: 8px 10px;
+        background-color: $black;
+        cursor: pointer;
+        border: none;
+        border-radius: 4px;
+        color: $grey_100;
+        font-weight: 700;
+        &.buttonDisable {
+          opacity: 0.5;
+          cursor: not-allowed;
+        }
       }
     }
   }

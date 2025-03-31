@@ -35,8 +35,8 @@ const Greeting = () => {
         <div className={styles.backTasks}>Back To Tasks</div>
       </div>
       <div className={styles.container}>
-        <div className={styles.greetingTitle}>2. Greeting Component</div>
-        <div className={styles.greetingContain}>
+        <div className={styles.taskTitle}>2. Greeting Component</div>
+        <div className={styles.taskDescription}>
           Create a Greeting component that takes a name as a prop and displays a
           personalized message.
         </div>

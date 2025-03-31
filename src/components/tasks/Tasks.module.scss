@@ -24,6 +24,10 @@
       max-width: 300px;
       border-radius: 5px;
       flex: 1 1 250px;
+      &:hover {
+        transition: all 0.5s ease;
+        transform: scale(1.05);
+      }
       .cardTitle {
         display: flex;
         gap: 5px;
