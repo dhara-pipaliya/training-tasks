@@ -1,0 +1,91 @@
+@import "../../styles/color.scss";
+
+.cardHome {
+  display: flex;
+  gap: 10px;
+  margin: 20px;
+  flex-wrap: wrap;
+  > svg {
+    color: $black;
+    cursor: pointer;
+  }
+  .backTasks {
+    cursor: pointer;
+    color: $black;
+    font-weight: 700;
+    font-size: 16px;
+  }
+}
+
+.container {
+  border: 1px solid $grey_100;
+  border-radius: 4px;
+  padding: 20px;
+  margin: 0 40px;
+  min-width: 100px;
+  .taskHeading {
+    font-size: 20px;
+    font-weight: 700;
+    color: $black;
+  }
+  .taskDescription {
+    color: $grey;
+    font-size: 12px;
+  }
+  .addTask {
+    font-size: 14px;
+    font-weight: 700;
+    color: $black;
+    padding: 60px 0px 10px 0px;
+  }
+  .fieldFlex {
+    display: flex;
+    .todoInput {
+      width: 100%;
+      outline: none;
+      border-radius: 8px;
+      padding: 10px;
+      border: 1px solid $grey_100;
+    }
+    .todoButton {
+      background-color: $black;
+      padding: 10px 20px;
+      cursor: pointer;
+      color: $white;
+      border-radius: 8px;
+      margin-left: 10px;
+      &.buttonDisable {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+    }
+  }
+  .countTask {
+    color: $black;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 20px 0px 10px 0px;
+  }
+  .emptyTodo {
+    color: $grey_100;
+    text-align: center;
+  }
+  .dataDetails {
+    display: flex;
+    background-color: $grey_100;
+    border-radius: 8px;
+    margin: 10px 0px;
+    padding: 10px;
+    &.inputBorder {
+      border: 1px solid $black;
+    }
+    .showData {
+      width: 100%;
+      text-transform: capitalize;
+    }
+    .todoIcon {
+      cursor: pointer;
+      margin-left: 10px;
+    }
+  }
+}

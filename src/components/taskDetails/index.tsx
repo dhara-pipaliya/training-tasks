@@ -1,8 +1,8 @@
 import { useParams } from "react-router-dom";
 import Counter from "../counter";
 import Greeting from "../greeting";
-import Validation from "../formHandling";
-import FormHandling from "../greeting";
+import FormHandling from "../formHandling";
+import TodoList from "../todoList";
 
 const TaskDetails = () => {
   const params = useParams();
@@ -14,9 +14,9 @@ const TaskDetails = () => {
       case 2:
         return <Greeting />;
       case 3:
-        return <Validation />;
-      case 4:
         return <FormHandling />;
+      case 4:
+        return <TodoList />;
       default:
         return <div>{params.id}</div>;
     }

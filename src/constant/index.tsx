@@ -21,9 +21,9 @@ export const tasks: ITask[] = [
   },
   {
     id: 4,
-    title: "Counter App",
+    title: "Todo List",
     description:
-      "count the value using a class component with increment and decrement, state methods,and updates the value using the setstate method.",
+      "Build a simple todo list where users can add and remove tasks using state and list rendering.",
   },
   {
     id: 5,
