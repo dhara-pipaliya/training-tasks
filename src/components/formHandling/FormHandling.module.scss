@@ -9,23 +9,6 @@ input[type="number"] {
   -moz-appearance: textfield;
 }
 
-.cardHome {
-  display: flex;
-  gap: 10px;
-  margin: 20px;
-  flex-wrap: wrap;
-  > svg {
-    color: $black;
-    cursor: pointer;
-  }
-  .backTasks {
-    cursor: pointer;
-    color: $black;
-    font-weight: 700;
-    font-size: 16px;
-  }
-}
-
 .container {
   border: 1px solid $grey_100;
   border-radius: 4px;

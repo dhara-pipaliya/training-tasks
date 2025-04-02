@@ -1,12 +1,14 @@
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import Counter from "../counter";
 import Greeting from "../greeting";
 import FormHandling from "../formHandling";
 import TodoList from "../todoList";
+import styles from "./TaskDetails.module.scss";
+import ArrowBackOutlinedIcon from "@mui/icons-material/ArrowBackOutlined";
 
 const TaskDetails = () => {
   const params = useParams();
-
+  const navigate = useNavigate();
   const renderComponent = () => {
     switch (Number(params.id)) {
       case 1:
@@ -22,7 +24,15 @@ const TaskDetails = () => {
     }
   };
 
-  return <>{renderComponent()}</>;
+  return (
+    <div>
+      <div className={styles.cardHome} onClick={() => navigate("/")}>
+        <ArrowBackOutlinedIcon />
+        <div className={styles.backTasks}>{`Back To Tasks`}</div>
+      </div>
+      {renderComponent()}
+    </div>
+  );
 };
 
 export default TaskDetails;
