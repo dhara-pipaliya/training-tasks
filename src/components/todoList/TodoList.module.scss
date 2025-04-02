@@ -71,6 +71,9 @@
     text-align: center;
   }
   .dataDetails {
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
     display: flex;
     background-color: $grey_100;
     border-radius: 8px;
@@ -79,9 +82,17 @@
     &.inputBorder {
       border: 1px solid $black;
     }
-    .showData {
-      width: 100%;
-      text-transform: capitalize;
+    .abc {
+      display: flex;
+      align-items: center;
+      .showData {
+        width: 100%;
+        text-transform: capitalize;
+        margin-left: 10px;
+        &.lineThrough {
+          text-decoration-line: line-through;
+        }
+      }
     }
     .todoIcon {
       cursor: pointer;

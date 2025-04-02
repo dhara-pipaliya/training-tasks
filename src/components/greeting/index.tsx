@@ -10,9 +10,12 @@ interface IGreetingResult {
 const GreetingResult = ({ name = "guest" }: IGreetingResult) => {
   return (
     <div className={styles.greetingSection}>
-      <div className={styles.greetingHead}>Hello,{name}</div>
+      <div className={styles.greetingHead}>
+        {`Hello,`}
+        {name}
+      </div>
       <div className={styles.greetingDescription}>
-        Welcome to our application
+        {` Welcome to our application`}
       </div>
     </div>
   );
@@ -32,16 +35,16 @@ const Greeting = () => {
     <div>
       <div className={styles.cardHome} onClick={() => navigate("/")}>
         <ArrowBackOutlinedIcon />
-        <div className={styles.backTasks}>Back To Tasks</div>
+        <div className={styles.backTasks}>{`Back To Tasks`}</div>
       </div>
       <div className={styles.container}>
-        <div className={styles.taskTitle}>2. Greeting Component</div>
+        <div className={styles.taskTitle}>{`2. Greeting Component`}</div>
         <div className={styles.taskDescription}>
-          Create a Greeting component that takes a name as a prop and displays a
-          personalized message.
+          {`  Create a Greeting component that takes a name as a prop and displays a
+          personalized message.`}
         </div>
         <GreetingResult name={name || undefined} />
-        <div className={styles.inputHeading}>Enter a name:</div>
+        <div className={styles.inputHeading}>{`Enter a name:`}</div>
         <div className={styles.inputSection}>
           <input
             type="text"
@@ -56,7 +59,7 @@ const Greeting = () => {
             }`}
             onClick={onUpdate}
           >
-            update
+            {`update`}
           </button>
         </div>
       </div>

@@ -4,10 +4,10 @@ import ArrowBackOutlinedIcon from "@mui/icons-material/ArrowBackOutlined";
 import DeleteOutlineOutlinedIcon from "@mui/icons-material/DeleteOutlineOutlined";
 import EditOutlinedIcon from "@mui/icons-material/EditOutlined";
 import { useState } from "react";
-
 interface ITask {
   id: number;
   name: string;
+  isCompleted: boolean;
 }
 
 const TodoList = () => {
@@ -27,7 +27,10 @@ const TodoList = () => {
       setTasks(updateValue);
       setSelectedTask(null);
     } else {
-      setTasks([...tasks, { name: inputValue, id: Math.random() }]);
+      setTasks([
+        ...tasks,
+        { name: inputValue, id: Math.random(), isCompleted: false },
+      ]);
     }
     setInputValue("");
   };
@@ -43,11 +46,19 @@ const TodoList = () => {
     setTasks(deleteData);
   };
 
+  const handleChange = (Value: number) => {
+    setTasks(
+      tasks.map((task) =>
+        task.id === Value ? { ...task, isCompleted: !task.isCompleted } : task
+      )
+    );
+  };
+
   return (
     <div>
       <div className={styles.cardHome} onClick={() => navigate("/")}>
         <ArrowBackOutlinedIcon />
-        <div className={styles.backTasks}>Back To Tasks</div>
+        <div className={styles.backTasks}>{`Back To Tasks`}</div>
       </div>
       <div className={styles.container}>
         <div className={styles.taskHeading}>{`Todo List`}</div>
@@ -88,15 +99,30 @@ const TodoList = () => {
                     selectedTask?.id === res?.id ? styles.inputBorder : ""
                   }`}
                 >
-                  <div className={styles.showData}>{res.name}</div>
-                  <DeleteOutlineOutlinedIcon
-                    onClick={() => handleDelete(index)}
-                    className={styles.todoIcon}
-                  />
-                  <EditOutlinedIcon
-                    className={styles.todoIcon}
-                    onClick={() => handleEdit(res)}
-                  />
+                  <div className={styles.abc}>
+                    <input
+                      type="checkbox"
+                      checked={res.isCompleted}
+                      onChange={() => handleChange(res.id)}
+                    ></input>
+                    <div
+                      className={`${styles.showData} ${
+                        res.isCompleted ? styles.lineThrough : ""
+                      }`}
+                    >
+                      {res.name}
+                    </div>
+                  </div>
+                  <div>
+                    <DeleteOutlineOutlinedIcon
+                      onClick={() => handleDelete(index)}
+                      className={styles.todoIcon}
+                    />
+                    <EditOutlinedIcon
+                      className={styles.todoIcon}
+                      onClick={() => handleEdit(res)}
+                    />
+                  </div>
                 </div>
               );
             })
