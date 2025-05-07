@@ -1,0 +1,91 @@
+@import "../../../styles/color.scss";
+
+.container {
+  padding: 0px 90px 40px 90px;
+  .backPage {
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 600;
+    > svg {
+      width: 15px;
+      height: 15px;
+    }
+  }
+  .order {
+    font-size: 40px;
+    font-weight: 700;
+    padding-bottom: 20px;
+    color: #3a3a3a;
+  }
+
+  .totalPrice {
+    display: flex;
+    font-weight: 600;
+    font-size: 26px;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 10px;
+    color: #3a3a3a;
+    .icon {
+      display: flex;
+      align-items: center;
+      > svg {
+        width: 22px;
+        height: 22px;
+      }
+    }
+  }
+  .contain {
+    padding: 0px 0px 17px 30px;
+
+    li::marker {
+      color: #f9cc9d;
+      width: 10px;
+      font-size: 1.3em;
+    }
+    li {
+      padding-bottom: 6px;
+      font-size: 20px;
+      font-weight: 600;
+      color: #3a3a3a;
+
+      span {
+        margin: 5px;
+      }
+    }
+  }
+  .totalFlex {
+    padding-top: 10px;
+    display: flex;
+    gap: 8px;
+    .checkbox {
+      accent-color: #f4f0ec;
+      height: 20px;
+      width: 20px;
+      // border-radius: 8px;
+      border: 2px solid #f9cc9d;
+    }
+    .totalInput {
+      font-size: 14px;
+      font-weight: 500;
+      color: #3a3a3a;
+    }
+  }
+  .error {
+    color: $error;
+    font-size: 12px;
+    margin-top: 10px;
+  }
+  .orderButton {
+    padding: 16px 36px;
+    border-radius: 14px;
+    background-color: #cda274;
+    color: $white;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 600;
+    border: none;
+    box-shadow: 0 4px 8px 0 #1f202240, 0 6px 10px 0 #1f202240;
+    margin-top: 40px;
+  }
+}

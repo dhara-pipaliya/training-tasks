@@ -4,8 +4,9 @@ import ReplayOutlinedIcon from "@mui/icons-material/ReplayOutlined";
 import RemoveOutlinedIcon from "@mui/icons-material/RemoveOutlined";
 import AddOutlinedIcon from "@mui/icons-material/AddOutlined";
 
-const Counter = () => {
+const Counter = (props: any) => {
   const [count, setCount] = useState(0);
+  const { taskDetail } = props;
 
   const decrement = () => {
     if (count === 0) return;
@@ -14,11 +15,10 @@ const Counter = () => {
 
   return (
     <div className={styles.container}>
-      <div className={styles.countTitle}>1. Counter App</div>
-      <div className={styles.countContain}>
-        Create a simple counter with increment, decrement, and Reset buttons
-        using useState.
+      <div className={styles.countTitle}>
+        {taskDetail?.id}.{taskDetail?.title}
       </div>
+      <div className={styles.countContain}>{taskDetail?.description}</div>
       <div className={styles.countSection}>
         <div className={styles.count}>{count}</div>
         <div className={styles.countDescription}>Current Count</div>

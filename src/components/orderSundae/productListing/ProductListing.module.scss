@@ -1,0 +1,131 @@
+@import "../../../styles/color.scss";
+
+.container {
+  padding: 50px 90px 0 90px;
+  .heading {
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 120%;
+  }
+  .title {
+    font-weight: 600;
+    font-size: 24px;
+    padding: 20px 0 5px 0;
+  }
+  .totalPrice {
+    display: flex;
+    font-weight: 500;
+    font-size: 20px;
+    align-items: center;
+    gap: 5px;
+    .icon {
+      display: flex;
+      align-items: center;
+      > svg {
+        width: 22px;
+        height: 22px;
+      }
+    }
+  }
+  .productSection {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 30px 0px 30px 0px;
+    gap: 100px;
+    :hover {
+      background-color: #f4f0ec;
+    }
+    .product {
+      border: 2px solid $grey_100;
+      padding: 20px 20px 40px 20px;
+      min-width: 250px;
+      max-width: 382px;
+      padding: 10px 10px 20px 10px;
+      flex: 1 1 250px;
+      border-radius: 50px;
+      .productImg {
+        width: 100%;
+      }
+      .productDetails {
+        padding: 10px;
+        .ProductName {
+          font-size: 24px;
+          font-weight: 600;
+        }
+        .productCheckBox {
+          display: flex;
+          gap: 16px;
+          align-items: center;
+          .checkbox {
+            accent-color: #f4f0ec;
+            height: 24px;
+            width: 24px;
+            border-radius: 8px;
+          }
+        }
+        .productPriceQuantity {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          .productPrice {
+            display: flex;
+            padding: 12px 0px 0px 0px;
+            > svg {
+              width: 22px;
+              height: 22px;
+              margin-top: 4px;
+            }
+            .price {
+              font-size: 20px;
+              font-weight: 600;
+            }
+          }
+          .productQuantity {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            > svg {
+              cursor: pointer;
+              padding: 10px;
+              fill: $black;
+              height: 40px;
+              width: 40px;
+              border-radius: 4px;
+              border: 1px solid $grey_100;
+              background-color: $white;
+            }
+            .pquantity {
+              font-size: 26px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .orderSummary {
+    text-align: center;
+    padding: 20px;
+    .total {
+      font-size: 34px;
+      font-weight: 600;
+      padding-bottom: 30px;
+    }
+    .error {
+      font-size: 12px;
+      padding-bottom: 10px;
+      color: $error;
+    }
+    .orderButton {
+      padding: 20px 50px;
+      border-radius: 16px;
+      background-color: #cda274;
+      color: $white;
+      cursor: pointer;
+      font-size: 12px;
+      font-weight: 600;
+      border: none;
+      box-shadow: 0 4px 8px 0 #1f202240, 0 6px 10px 0 #1f202240;
+    }
+  }
+}

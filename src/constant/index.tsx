@@ -1,4 +1,5 @@
 import { ITask } from "../components/tasks";
+import { IOrder } from "../context/orderSundae";
 
 export const tasks: ITask[] = [
   {
@@ -24,5 +25,80 @@ export const tasks: ITask[] = [
     title: "Todo List",
     description:
       "Build a simple todo list where users can add and remove tasks using state and list rendering.",
+  },
+  {
+    id: 5,
+    title: "e-commerce",
+    description:
+      "Build a simple todo list where users can add and remove tasks using state and list rendering.",
+  },
+];
+
+export const scoops: IOrder[] = [
+  {
+    id: 1,
+    img: "/images/chocolate.png",
+    name: "Chocolate",
+    price: 10,
+    quantity: 0,
+  },
+  {
+    id: 2,
+    img: "/images/vanilla.png",
+    name: "Vanilla",
+    price: 20,
+    quantity: 0,
+  },
+  {
+    id: 3,
+    img: "/images/mintChip.png",
+    name: "Mint Chip",
+    price: 30,
+    quantity: 0,
+  },
+];
+
+export const toppings: IOrder[] = [
+  {
+    id: 1,
+    img: "/images/gummiBears.png",
+    name: "Gummi bears",
+    price: 40,
+    quantity: 0,
+  },
+  {
+    id: 2,
+    img: "/images/coldcherrie.png",
+    name: "Coldcherrie",
+    price: 50,
+    quantity: 0,
+  },
+  {
+    id: 3,
+    img: "/images/hotfudge.png",
+    name: "Hot Fudge",
+    price: 60,
+    quantity: 0,
+  },
+  {
+    id: 4,
+    img: "/images/caramel.png",
+    name: "Caramel",
+    price: 70,
+    quantity: 0,
+  },
+  {
+    id: 5,
+    img: "/images/cherrie.png",
+    name: "Cherrie",
+    price: 80,
+    quantity: 0,
+  },
+  {
+    id: 6,
+    img: "/images/strawberry.png",
+    name: "Strawberry",
+    price: 90,
+    quantity: 0,
   },
 ];

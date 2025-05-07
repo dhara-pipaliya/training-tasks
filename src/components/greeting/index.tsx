@@ -19,9 +19,10 @@ const GreetingResult = ({ name = "guest" }: IGreetingResult) => {
   );
 };
 
-const Greeting = () => {
+const Greeting = (props: any) => {
   const [name, setName] = useState<string | null>(null);
   const [inputValue, setInputValue] = useState("");
+  const { taskDetail } = props;
 
   const onUpdate = () => {
     setName(inputValue);
@@ -30,11 +31,10 @@ const Greeting = () => {
 
   return (
     <div className={styles.container}>
-      <div className={styles.taskTitle}>{`2. Greeting Component`}</div>
-      <div className={styles.taskDescription}>
-        {`  Create a Greeting component that takes a name as a prop and displays a
-          personalized message.`}
+      <div className={styles.taskTitle}>
+        {taskDetail?.id}.{taskDetail?.title}
       </div>
+      <div className={styles.taskDescription}>{taskDetail?.description}</div>
       <GreetingResult name={name || undefined} />
       <div className={styles.inputHeading}>{`Enter a name:`}</div>
       <div className={styles.inputSection}>

@@ -2,27 +2,20 @@ import styles from "./TodoList.module.scss";
 import DeleteOutlineOutlinedIcon from "@mui/icons-material/DeleteOutlineOutlined";
 import EditOutlinedIcon from "@mui/icons-material/EditOutlined";
 import { useState } from "react";
+
 interface ITask {
   id: number;
   name: string;
   isCompleted: boolean;
 }
 
-const TodoList = () => {
+const TodoList = (props: any) => {
   const [tasks, setTasks] = useState<ITask[]>([]);
   const [inputValue, setInputValue] = useState<string>("");
   const [selectedTask, setSelectedTask] = useState<ITask | null>(null);
-
+  const { taskDetail } = props;
   const handleSubmit = () => {
     if (selectedTask) {
-      // const updateValue = tasks.map((res) => {
-      //   if (selectedTask?.id === res?.id) {
-      //     return { ...res, name: inputValue };
-      //   }
-      //   return res;
-      // });
-      // setTasks(updateValue);
-
       setTasks(
         tasks.map((res) =>
           selectedTask?.id === res?.id ? { ...res, name: inputValue } : res
@@ -44,9 +37,6 @@ const TodoList = () => {
   };
 
   const handleDelete = (index: number) => {
-    // const filterTask = tasks.filter((_, i) => i !== index);
-    // setTasks(filterTask);
-
     const deleteData = [...tasks];
     deleteData.splice(index, 1);
     setTasks(deleteData);
@@ -62,11 +52,10 @@ const TodoList = () => {
 
   return (
     <div className={styles.container}>
-      <div className={styles.taskHeading}>{`Todo List`}</div>
-      <div className={styles.taskDescription}>
-        {`  Build a simple todo list where users can add and remove tasks using
-          state and list rendering.`}
+      <div className={styles.taskHeading}>
+        {taskDetail?.id}.{taskDetail?.title}
       </div>
+      <div className={styles.taskDescription}>{taskDetail?.description}</div>
       <div>
         <div className={styles.addTask}>{`Add a new task:`}</div>
         <div className={styles.fieldFlex}>
