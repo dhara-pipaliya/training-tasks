@@ -3,7 +3,7 @@ import {
   IOrder,
   IOrderSundaeContext,
   OrderSundaeContext,
-} from "../../../context/orderSundae";
+} from "../../../../context/orderSundae";
 import styles from "./thankYouPage.module.scss";
 
 interface IProps {

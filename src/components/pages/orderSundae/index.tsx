@@ -1,8 +1,8 @@
 import { useState } from "react";
-import OrderSundaeProvider from "../../context/orderSundae";
 import OrderSummary from "./orderSummary";
 import ProductListing from "./productListing";
 import ThankYouPage from "./thankYouPage";
+import OrderSundaeProvider from "../../../context/orderSundae";
 
 const OrderSundae = () => {
   const [step, setStep] = useState<number>(1);

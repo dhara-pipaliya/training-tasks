@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { tasks } from "../../constant";
+import { tasks } from "../../../constant";
 import styles from "./Tasks.module.scss";
 
 export interface ITask {

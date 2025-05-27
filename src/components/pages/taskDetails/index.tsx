@@ -5,9 +5,10 @@ import FormHandling from "../formHandling";
 import TodoList from "../todoList";
 import styles from "./TaskDetails.module.scss";
 import ArrowBackOutlinedIcon from "@mui/icons-material/ArrowBackOutlined";
-import { tasks } from "../../constant";
+import { tasks } from "../../../constant";
 import { useEffect, useState } from "react";
 import OrderSundae from "../orderSundae";
+import UserTodo from "../userTodo";
 
 const TaskDetails = () => {
   const [currentTask, setCurrentTask] = useState<any>({});
@@ -38,6 +39,8 @@ const TaskDetails = () => {
         return <TodoList taskDetail={currentTask} />;
       case 5:
         return <OrderSundae />;
+      case 6:
+        return <UserTodo />;
       default:
         return <div>{params.id}</div>;
     }

@@ -4,7 +4,7 @@ import { useContext, useState } from "react";
 import {
   IOrderSundaeContext,
   OrderSundaeContext,
-} from "../../../context/orderSundae";
+} from "../../../../context/orderSundae";
 import styles from "../orderSummary/orderSummary.module.scss";
 
 interface IProps {
