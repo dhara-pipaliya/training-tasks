@@ -9,6 +9,7 @@ import { tasks } from "../../../constant";
 import { useEffect, useState } from "react";
 import OrderSundae from "../orderSundae";
 import UserTodo from "../userTodo";
+import UserManagement from "../userManagement";
 
 const TaskDetails = () => {
   const [currentTask, setCurrentTask] = useState<any>({});
@@ -41,6 +42,8 @@ const TaskDetails = () => {
         return <OrderSundae />;
       case 6:
         return <UserTodo />;
+      case 7:
+        return <UserManagement taskDetail={currentTask} />;
       default:
         return <div>{params.id}</div>;
     }

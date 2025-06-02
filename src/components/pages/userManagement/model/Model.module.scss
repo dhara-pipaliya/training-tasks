@@ -1,0 +1,61 @@
+@import "../../../../styles/color.scss";
+
+.model {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: clamp(300px, 36%, 600px);
+  box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  padding: 17px;
+  border-radius: 8px;
+  .userForm {
+    width: 100%;
+    max-height: 70vw;
+    overflow: auto;
+    .addUser {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+      .addContain {
+        font-size: 20px;
+        font-weight: 700;
+      }
+      .closeIcon {
+        cursor: pointer;
+      }
+    }
+    .field {
+      margin-bottom: 10px;
+      .label {
+        font-weight: 600;
+        font-size: 14px;
+      }
+      .error {
+        color: $error;
+        font-size: 12px;
+      }
+      .inputField {
+        width: 100%;
+        // margin: 7px 0px;
+      }
+      .selectField {
+        width: 100%;
+        border-radius: 5px;
+        // margin: 7px 0px;
+      }
+    }
+    .submit {
+      background-color: $black;
+      color: $white;
+      padding: 8px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 400;
+      font-size: 20px;
+      width: 100%;
+    }
+  }
+}

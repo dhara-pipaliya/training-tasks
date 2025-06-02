@@ -1,0 +1,48 @@
+@import "../../../../styles/color.scss";
+
+.cardHead {
+  border: 1px solid lightgray;
+  border-radius: 4px;
+  padding: 20px 20px;
+  .cardContain {
+    display: flex;
+    justify-content: space-between;
+    .avatarSection {
+      display: flex;
+      gap: 10px;
+      .avatar {
+        text-transform: uppercase;
+      }
+      .cardName {
+        font-weight: 600;
+        font-size: 18px;
+        text-transform: capitalize;
+      }
+      .cardEmail {
+        font-weight: 500;
+        font-size: 12px;
+        color: $grey;
+        padding-bottom: 8px;
+      }
+      .optionSection {
+        display: flex;
+        gap: 10px;
+        padding-bottom: 2px;
+      }
+      .joinedDate {
+        font-weight: 500;
+        font-size: 12px;
+        color: $grey;
+      }
+    }
+    .actionSection {
+      display: flex;
+      gap: 24px;
+      .actionIcon {
+        cursor: pointer;
+        width: 18px;
+        height: 18px;
+      }
+    }
+  }
+}

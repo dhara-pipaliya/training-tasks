@@ -1,0 +1,101 @@
+@import "../../../styles/color.scss";
+
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  .managementSection {
+    border: 1px solid $grey_100;
+    border-radius: 8px;
+    padding: 25px 20px;
+    width: 90%;
+    height: 100%;
+    .taskHeading {
+      font-size: 20px;
+      font-weight: 700;
+      color: $black;
+    }
+    .taskDescription {
+      color: $grey;
+      font-size: 12px;
+    }
+    .inputSection {
+      display: flex;
+      gap: 14px;
+      padding: 20px 0px;
+      .searchField {
+        width: 75%;
+        height: 8px;
+      }
+      .allUserSelect {
+        width: 15%;
+        .selected {
+          width: 100%;
+        }
+      }
+      .addButton {
+        color: white;
+        font-size: 10px;
+        font-weight: 600;
+        height: 40px;
+        width: 10%;
+        background-color: black;
+        border-radius: 4px;
+      }
+    }
+    .cardSection {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 14px;
+      .noData {
+        color: $grey;
+        display: flex;
+        font-weight: 600;
+        justify-content: center;
+        padding: 40px 0;
+        grid-column: 1 / -1;
+      }
+    }
+    .totalSection {
+      color: $grey;
+      font-size: 14px;
+      padding-top: 20px;
+    }
+  }
+}
+
+// -----------------------Media-Query-------------------
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .container {
+    .managementSection {
+      .taskHeading {
+        font-size: 18px;
+      }
+      .taskDescription {
+        font-size: 11px;
+      }
+      .inputSection {
+        flex-direction: row;
+        gap: 10px;
+        .searchFiled {
+          width: 100%;
+        }
+        .allUserSelect {
+          width: 40%;
+        }
+        .addButton {
+          width: 30%;
+        }
+      }
+      .cardSection {
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+      }
+    }
+    .model {
+      width: 90%;
+      padding: 14px;
+    }
+  }
+}
