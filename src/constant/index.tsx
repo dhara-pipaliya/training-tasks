@@ -38,6 +38,12 @@ export const tasks: ITask[] = [
     description:
       "User Details using material UI component with use useReducer() hook for state management",
   },
+  {
+    id: 7,
+    title: "User Management",
+    description:
+      "Practice CRUD operations, caching, and optimistic updates using Redux",
+  },
 ];
 
 export const scoops: IOrder[] = [
